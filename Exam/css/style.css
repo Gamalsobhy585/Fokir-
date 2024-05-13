@@ -1,0 +1,651 @@
+:root {
+  --main-color: #fff;
+  --secondary-color: #1c1c1c;
+  --bg-color: #f7f7f7;
+  --input-color: #f4f4f4;
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+}
+* {
+  transition: all 0.3s ease-in;
+}
+.ft-mont {
+  font-family: var(--main-font);
+}
+.ft-pop {
+  font-family: var(--secondary-font);
+}
+
+.text-black {
+  color: var(--secondary-color);
+}
+.text-white {
+  color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--bg-color);
+}
+.input-bg {
+  background-color: var(--input-color);
+}
+.text-grey {
+  color: #748182;
+}
+
+.counter-span {
+  width: 5rem;
+  height: 5rem;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+.my-indicators .carousel-indicator-button {
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #d6d6d6;
+}
+.my-indicators .carousel-indicator-button:hover {
+  background-color: #869791;
+}
+.w-7 {
+  width: 7%;
+}
+
+.fs-12px {
+  font-size: 0.75rem;
+}
+.section-head {
+  width: fit-content;
+  z-index: 2;
+}
+.section-head::after {
+  content: "";
+  width: 100%;
+  height: 1.875rem;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -0.625rem;
+  left: 0;
+  z-index: -1;
+}
+
+.service-card {
+  box-shadow: 0 0.8125rem 0.5rem -0.625rem rgba(0, 0, 0, 0.1);
+  padding-inline: 1.3rem;
+  transition: all 1s ease-in;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.service-card:hover {
+  .serviceicon {
+    color: var(--main-color) !important;
+  }
+  span {
+    background-color: var(--secondary-color);
+  }
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card:hover {
+  .contacticon {
+    color: var(--main-color) !important ;
+    position: relative;
+  }
+  span {
+    background-color: var(--secondary-color);
+  }
+}
+
+.icon span {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+}
+.bg-footer {
+  background-color: #1c1c1c;
+}
+
+.header-background {
+  background-image: url(../images/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.parallax {
+  background-attachment: scroll;
+}
+
+.header-bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0rem;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+@keyframes typing {
+  0% {
+    content: "Larry Daniels";
+  }
+  2% {
+    content: "Larry Daniel";
+  }
+  5% {
+    content: "Larry Danie";
+  }
+  8% {
+    content: "Larry Dani";
+  }
+  10% {
+    content: "Larry Dan";
+  }
+  12% {
+    content: "Larry Da";
+  }
+  14% {
+    content: "Larry D";
+  }
+  17% {
+    content: "Larry ";
+  }
+  19% {
+    content: "Larr";
+  }
+  22% {
+    content: "Lar";
+  }
+  25% {
+    content: "La";
+  }
+  28% {
+    content: "L";
+  }
+  30% {
+    content: "";
+  }
+  33% {
+    content: "D";
+  }
+  35% {
+    content: "De";
+  }
+  38% {
+    content: "Dev";
+  }
+  41% {
+    content: "Deve";
+  }
+  43% {
+    content: "Devel";
+  }
+  47% {
+    content: "Develo";
+  }
+  50% {
+    content: "Develop";
+  }
+  52% {
+    content: "Develope";
+  }
+  55% {
+    content: "Developer";
+  }
+  58% {
+    content: "Develope";
+  }
+  60% {
+    content: "Develop";
+  }
+  62% {
+    content: "Develo";
+  }
+  65% {
+    content: "Devel";
+  }
+  68% {
+    content: "Deve";
+  }
+  70% {
+    content: "Dev";
+  }
+  72% {
+    content: "De";
+  }
+  75% {
+    content: "Des";
+  }
+  78% {
+    content: "Desi";
+  }
+  80% {
+    content: "Desig";
+  }
+  82% {
+    content: "Design";
+  }
+  84% {
+    content: "Designe";
+  }
+  86% {
+    content: "Designer";
+  }
+  88% {
+    content: "Designe";
+  }
+  90% {
+    content: "Design";
+  }
+  92% {
+    content: "Desig";
+  }
+  94% {
+    content: "Desi";
+  }
+  96% {
+    content: "Des";
+  }
+  98% {
+    content: "De";
+  }
+  99% {
+    content: "D";
+  }
+  100% {
+    content: "";
+  }
+}
+
+.words-animation::before {
+  display: inline-block;
+  content: "";
+  animation: typing 4s steps(4) infinite;
+  font-size: 3.75rem;
+  font-weight: 600;
+}
+.fs-60px {
+  font-size: 3.75rem;
+}
+.navbar-scrolled {
+  background-color: white;
+  box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  height: 4.6875rem;
+}
+
+.social-icons {
+  position: absolute;
+  top: 60%;
+  right: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translateX(50%);
+}
+
+.social-icons li {
+  list-style: none;
+  margin: 0 0.625rem;
+}
+
+.social-icons li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.social-icons li a i {
+  color: white;
+  font-size: 1.25rem;
+}
+.btn-custom {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: white;
+  color: black;
+}
+
+.ls-wide {
+  letter-spacing: 0.1em;
+}
+.progress-label:first-child {
+  left: 0;
+}
+
+.progress-label:last-child {
+  right: 0;
+}
+
+.start-2 {
+  left: 2%;
+}
+
+.start-90 {
+  left: 90%;
+}
+.start-75 {
+  left: 75%;
+}
+.start-85 {
+  left: 85%;
+}
+.progress {
+  box-shadow: 0rem 0.125rem 0.4375rem rgba(0, 0, 0, 0.15) inset;
+
+  --bs-progress-height: 1.4rem;
+  --bs-progress-bg: #f7f7f7;
+}
+.contact-button:hover {
+  a {
+    color: var(--main-color) !important;
+  }
+}
+.about-img::after {
+  position: absolute;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  content: "";
+  width: 75%;
+  height: 75%;
+  bottom: -1.875rem;
+  z-index: -1;
+
+  left: 0;
+}
+.about-img {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 0 2rem;
+}
+.bg-brown {
+  background-color: #5b5b5b;
+}
+
+.card-img img:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease;
+}
+.card:hover .social {
+  cursor: pointer;
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+}
+
+.social {
+  background-color: rgba(255, 255, 255, 0.95);
+  inset: 0.3125rem;
+  opacity: 0;
+  transition: 0.5s;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+.social ul li a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 0.0625rem solid #000;
+}
+
+.social ul li a {
+  border: 0.0625rem solid #000;
+  color: #fff;
+  background-color: #000;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.card:hover .works {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.works {
+  background-color: rgba(255, 255, 255, 0.95);
+  inset: 0.75rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.works ul li a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 0.0625rem solid #000;
+}
+
+.works ul li a {
+  border: 0.0625rem solid #000;
+  color: #fff;
+  background-color: #000;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+}
+.works-text {
+  left: 50%;
+  top: 30%;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.filter-tabs span::before {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom: -0.3125rem;
+  transition: all 0.4s;
+  z-index: -1;
+}
+.filter-tabs .active:before {
+  width: 95%;
+}
+.filter-tabs span {
+  cursor: pointer;
+}
+
+.lightBoxContainer{
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);;
+}
+#lightBox i{
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 0.75rem;
+}
+.lightBox {
+    height: 70vh;
+    width: 50%;
+    background-image: url("");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#carousel-bg {
+  cursor: grab;
+}
+
+@media screen and (max-width: 768px) {
+  .fs-60px {
+    font-size: 1.875rem;
+  }
+
+  .words-animation::before {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+    border: none;
+    border-top: 0.0625rem solid rgba(12, 12, 12, 0.04);
+    background: #fff;
+    margin-top: 0.3125rem;
+    padding-bottom: 0.9375rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: black;
+    text-align: center;
+  }
+  .navbar-nav li {
+    width: 100%;
+    text-align: center;
+    margin-block: 1rem;
+    margin-inline: 1rem;
+  }
+  .navbar-nav li a {
+    padding-bottom: 0 !important;
+    color: #111 !important;
+    display: inline-block;
+  }
+  .logo {
+    position: static;
+  }
+  #navbarSupportedContent {
+    width: 15rem;
+    border-radius: 0.3125rem;
+  }
+
+  .carousel-item img {
+    width: 25%;
+  }
+  .carousel-item p {
+    width: 100%;
+  }
+  .lightBox {
+    width: 100%;
+   
+}
+}
+
+.navbar-custom {
+  position: relative;
+  bottom: 3rem;
+}
+
+.navbar-toggler-black {
+  background-image: url(../images/togglerpng.png);
+}
+
+
+
+
+
+
+.navbar-nav > li > a:after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0.25rem;
+    transition: all 0.5s;
+}
+
+.navbar-nav > li .active:after {
+    width: 90%;
+}
+
+.navbar-black .navbar-nav > li > a:after {
+    background: #000;}
+
+    
+    
+    .progress-animation-one {
+        animation: prog-one 3s ease 1s forwards;  
+    }    
+    .progress-animation-two {
+        animation: prog-two 3s ease 1s forwards;  
+    }    
+    .progress-animation-three {
+        animation: prog-three 3s ease 1s forwards;  
+    }    
+    
+
+
+    @keyframes prog-one {
+        0% {
+            width: 0%;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 95%;
+        }
+    }
+    @keyframes prog-two {
+        0% {
+            width: 0%;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 80%;
+        }
+    }
+    @keyframes prog-three {
+        0% {
+            width: 0%;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 90%;
+        }
+    }
+    
+    /* .works {
+        pointer-events: none; 
+      } */
+      .lightbox-label{
+        top: 100%;
+        left: 80%;
+        margin-top: 1rem;}
